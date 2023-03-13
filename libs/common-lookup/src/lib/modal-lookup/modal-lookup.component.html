@@ -8,15 +8,15 @@
     <table>
       <tbody>
         <tr>
-          <td>FirstName:</td>
+          <td>VIN Number:</td>
           <td>
-            <input type="text" name="employeeFirstName" id="employeeFirstName">
+            <input type="text" name="VinNo" id="VinNo" placeholder="Enter VIN Number">
           </td>
         </tr>
         <tr>
-          <td>LastName:</td>
+          <td>SSN:</td>
           <td>
-            <input type="text" name="employeeLastName" id="employeeLastName">
+            <input type="text" name="ssn" id="ssn" placeholder="Enter SSN number">
           </td>
         </tr>
       </tbody>
@@ -24,22 +24,18 @@
   </div>
   <div>
     <table class="table">
-      <thead *ngIf="employees.length!=0">
+      <thead *ngIf="accounts.length!=0">
         <tr>
-          <th scope="col">Employee Id</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
+          <th scope="col">Account No</th>
         </tr>
       </thead>
-      <tr *ngFor="let employee of employees">
-        <td>{{employee.employeeId}}</td>
-        <td>{{employee.firstName}}</td>
-        <td>{{employee.lastName}}</td>
-        <td><button (click)="dataTransfer(employee)">Select</button></td>
+      <tr *ngFor="let account of accounts">
+        <td>{{account.accountId}}</td>
+        <td><button (click)="dataTransfer(account.accountId)">Select</button></td>
       </tr>
     </table>
   </div>
 <div class="modal-footer">
-  <input type="submit" class="btn btn-primary" (click)="getEmployee()">
+  <input type="submit" class="btn btn-primary" (click)="getAccounts()">
   <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Close</button>
 </div>

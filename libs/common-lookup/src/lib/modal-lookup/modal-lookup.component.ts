@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Employee } from 'libs/common-lookup/Employee';
+import { Account } from 'libs/common-lookup/Account';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { DataTransferService } from '../data-transfer-service.service';
-import { EmployeeService } from '../employee-service.service';
+import { DataTransferService } from '../data-transfer.service';
+import {AccountGetService} from "../account-get.service";
 
 @Component({
   selector: 'mono-repo-modal-lookup',
@@ -10,16 +10,28 @@ import { EmployeeService } from '../employee-service.service';
   styleUrls: ['./modal-lookup.component.css'],
 })
 export class ModalLookupComponent {
-  
-  employees: Employee[] = [];
 
-  constructor(public modalRef: BsModalRef, private employeeService: EmployeeService,public dataTransferService:DataTransferService) {
+  accounts: Account[] = [];
+
+  constructor(public modalRef: BsModalRef, private accountGetService: AccountGetService,public dataTransferService:DataTransferService) {
   }
-  getEmployee(){
-    this.employees=this.employeeService.getEmployee();
+  getAccounts(){
+    this.accountGetService.getAccounts().subscribe((response: any) => {
+      this.accounts= this.process(response);
+      // console.log("Accounts: " + accounts.length)
+    })
+    // console.log("Accounts before: " + accounts.length)
+    //return accounts;
   }
-  dataTransfer(employee:Employee){
-    this.dataTransferService.DataTransfer(employee);
+  dataTransfer(accountId:number){
+    console.log("data"+accountId);
+    this.dataTransferService.DataTransfer(accountId);
     this.modalRef.hide();
+  }
+
+  private process(response: any) {
+    let list: Account[] = []
+    response.forEach((ele: any) => list.push(ele));
+    return list;
   }
 }

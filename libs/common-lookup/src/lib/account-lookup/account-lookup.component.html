@@ -1,0 +1,8 @@
+<form>
+  <div class="mb-3" *ngIf="accountNo!=0">
+      <label>Account No:</label>
+      <input type="text" [ngModel]="accountNo" name="accountNo" placeholder="Enter Account Number">
+      <button (click)="openModal()">Lookup</button>
+  </div>
+</form>
+
