@@ -7,13 +7,22 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataTransferService {
 
-  public account!:number
-  private showAccountId= new BehaviorSubject<number>(this.account);
-  accountIdFill=this.showAccountId.asObservable();
+  public account!:Account
+  // private showAccountId= new BehaviorSubject<number>(this.account);
+  //
+  // accountIdFill=this.showAccountId.asObservable();
+
+  private showAccount= new BehaviorSubject<Account>(this.account)
+  accountfill=this.showAccount.asObservable();
 
   constructor() { }
 
-  DataTransfer(accountId:number){
-    this.showAccountId.next(accountId);
+  // DataTransfer(accountId:number, last4SSN:bigint , vin:bigint){
+  //   this.showAccountId.next(accountId);
+  // }
+  DataTransfer(account:Account){
+    console.log("before show"+JSON.stringify(account))
+    this.showAccount.next(account)
+    console.log("Showaccount"+this.showAccount)
   }
 }

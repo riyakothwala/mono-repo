@@ -1,41 +1,85 @@
-<div class="modal-header">
-  <h5 id="lookUpModal">Employee Details</h5>
-  <button type="button" (click)="modalRef.hide()">
-      <span aria-hidden="true">×</span>
-  </button>
-</div>
-<div class="modal-body">
-    <table>
+<!--<div class="modal-header">-->
+<!--  <h5 id="lookUpModal">Employee Details</h5>-->
+<!--  <button type="button" (click)="closeDialog()">-->
+<!--      <span aria-hidden="true">×</span>-->
+<!--  </button>-->
+<!--</div>-->
+
+
+<h3 mat-dialog-title>Employee Detail</h3>
+<!--<button mat-dialog-actions type="button" (click)="closeDialog()">-->
+<!--    <span aria-hidden="true">×</span>-->
+<!--</button>-->
+
+
+<!--<div class="modal-body">-->
+<!--    <table>-->
+<!--      <tbody>-->
+<!--        <tr>-->
+<!--          <td>VIN Number:</td>-->
+<!--          <td>-->
+<!--            <input type="text" name="VinNo" id="VinNo" placeholder="Enter VIN Number">-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>SSN:</td>-->
+<!--          <td>-->
+<!--            <input type="text" name="ssn" id="ssn" placeholder="Enter SSN number">-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+<!--  </div>-->
+<div mat-dialog-content>
+  <form #accountForm="ngForm" (ngSubmit)="onSubmit(accountForm)">
+    <label>Enter firstname: </label>
+    <input type="text" name="firstName" ngModel>
+    <br>
+    <label>Enter lastname: </label>
+    <input type="text" name="lastName" ngModel>
+    <br>
+    <button type="submit">submit</button>
+    <button mat-button mat-dialog-close type="button" (click)="closeDialog()"> close </button>
+  </form>
+  <br>
+  <div>
+    <table class="table">
+      <thead>
+      <tr *ngIf="accounts!=[]">
+        <th scope="col">Account No</th>
+        <th scope="col">First name, Last name</th>
+        <th scope="col">SSN</th>
+        <th scope="col">VIN</th>
+      </tr>
+      </thead>
       <tbody>
-        <tr>
-          <td>VIN Number:</td>
-          <td>
-            <input type="text" name="VinNo" id="VinNo" placeholder="Enter VIN Number">
-          </td>
-        </tr>
-        <tr>
-          <td>SSN:</td>
-          <td>
-            <input type="text" name="ssn" id="ssn" placeholder="Enter SSN number">
-          </td>
-        </tr>
+      <tr *ngFor="let account of accounts">
+        <td>{{account.financialAccountNumber}}</td>
+        <td>{{account.name}}</td>
+        <td>{{account.last4SSN}}</td>
+        <td>{{account.vin}}
+        <td><button  (click)="dataTransfer(account)">Select</button></td>
+<!--          (click)="openInfoDialog()"-->
+<!--          (click)="dataTransfer(account)"-->
+      </tr>
       </tbody>
     </table>
   </div>
-  <div>
-    <table class="table">
-      <thead *ngIf="accounts.length!=0">
-        <tr>
-          <th scope="col">Account No</th>
-        </tr>
-      </thead>
-      <tr *ngFor="let account of accounts">
-        <td>{{account.accountId}}</td>
-        <td><button (click)="dataTransfer(account.accountId)">Select</button></td>
-      </tr>
-    </table>
-  </div>
-<div class="modal-footer">
-  <input type="submit" class="btn btn-primary" (click)="getAccounts()">
-  <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Close</button>
+
+
 </div>
+
+<ng-template #AlertDialog>
+  <h6 mat-dialog-title>Alert</h6>
+  <div mat-dialog-content>
+    Account Information is already added
+  </div>
+  <br>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitia (click)="closeDialog()" >Close</button>
+  </div>
+</ng-template>
+<!--<div class="modal-footer">-->
+<!--  <input type="submit" class="btn btn-primary" (click)="getAccounts()">-->
+<!--  <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Close</button>-->
+<!--</div>-->

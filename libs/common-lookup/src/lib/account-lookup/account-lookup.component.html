@@ -1,8 +1,55 @@
 <form>
-  <div class="mb-3" *ngIf="accountNo!=0">
+  <div class="mb-3">
       <label>Account No:</label>
-      <input type="text" [ngModel]="accountNo" name="accountNo" placeholder="Enter Account Number">
+      <input type="text" name="account" placeholder="Enter Account Number">
+      <label>Name:</label>
+      <input type="text"  name="name" placeholder="Enter Name">
+      <label>SSN:</label>
+      <input type="text"  name="ssn" placeholder="Enter SSN Number">
+      <label>VIN No:</label>
+      <input type="text"  name="account" placeholder="Enter Vin Number">
       <button (click)="openModal()">Lookup</button>
   </div>
 </form>
 
+<div>
+  <table mat-table class="mat-elevation-z8">
+    <thead>
+    <tr *ngIf="accounts.length!=0">
+      <th scope="col">Account No</th>
+      <th scope="col">First name, Last name</th>
+      <th scope="col">SSN</th>
+      <th scope="col">VIN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of accounts">
+      <td>{{account?.financialAccountNumber}}</td>
+      <td>{{account?.name}}</td>
+      <td>{{account?.last4SSN}}</td>
+      <td>{{account?.vin}}
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #myAlertDialog>
+  <h3 mat-dialog-title >Alert</h3>
+  <div mat-dialog-content>
+    Account Information is already selected
+  </div>
+  <br>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</ng-template>
+
+<!--mat-button mat-dialog-close-->
+<!--<h1 mat-dialog-title>Delete file</h1>-->
+<!--<div mat-dialog-content>-->
+<!--  Would you like to delete cat.jpeg?-->
+<!--</div>-->
+<!--<div mat-dialog-actions>-->
+<!--  <button mat-button mat-dialog-close>No</button>-->
+<!--  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>-->
+<!--</div>-->

@@ -5,7 +5,11 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
-import {CommonLookupModule} from "@mono-repo/common-lookup";
+import {AccountLookupComponent, CommonLookupModule} from "@mono-repo/common-lookup";
+import {FormsModule} from "@angular/forms";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
+
 
 
 @NgModule({
@@ -14,6 +18,9 @@ import {CommonLookupModule} from "@mono-repo/common-lookup";
     BrowserModule,
     RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
     CommonLookupModule,
+    FormsModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

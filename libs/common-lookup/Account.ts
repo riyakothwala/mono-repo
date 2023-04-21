@@ -1,3 +1,8 @@
 export interface Account {
-    accountId: number;
+  financialAccountNumber: number
+  name: string
+  last4SSN: bigint
+
+  vin: bigint
+
 }

@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3a4daf6-d16c-4df6-ac97-e100bc705ce2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/my-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/my-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/my-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/my-app/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/my-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/my-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/my-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/my-app/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/Account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/Account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-get.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-get.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-lookup/account-lookup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-lookup/account-lookup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-lookup/account-lookup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/account-lookup/account-lookup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/common-lookup.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/common-lookup.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/data-transfer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/data-transfer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/modal-lookup/modal-lookup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/modal-lookup/modal-lookup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common-lookup/src/lib/modal-lookup/modal-lookup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common-lookup/src/lib/modal-lookup/modal-lookup.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,28 +34,33 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2MkZpedZPEowg8CdHvJmDHRwFA9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/riyamodi/mono-repo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/riyamodi/mono-repo/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/riyamodi/mono-repo/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/riyamodi/Advanced-img/mono-project/mono-repo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/riyamodi/mono-repo/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/riyamodi/Advanced-img/mono-project/mono-repo/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,10 +73,44 @@
       <workItem from="1678313786685" duration="223000" />
       <workItem from="1678314016592" duration="68000" />
       <workItem from="1678314096503" duration="6303000" />
+      <workItem from="1678718125593" duration="1021000" />
+      <workItem from="1678720518434" duration="20067000" />
+      <workItem from="1678985204306" duration="602000" />
+      <workItem from="1678991490076" duration="2257000" />
+      <workItem from="1679003256856" duration="3480000" />
+      <workItem from="1679326276546" duration="10467000" />
+      <workItem from="1679409926168" duration="29715000" />
+      <workItem from="1679925953489" duration="1944000" />
+      <workItem from="1680010596761" duration="7533000" />
+      <workItem from="1680097561112" duration="3114000" />
+      <workItem from="1680208536199" duration="602000" />
+      <workItem from="1680899659138" duration="599000" />
+      <workItem from="1680963314731" duration="8000" />
+      <workItem from="1681135645338" duration="18595000" />
+      <workItem from="1681174828145" duration="599000" />
+      <workItem from="1681222321781" duration="596000" />
+      <workItem from="1681830682127" duration="13572000" />
+      <workItem from="1681929283695" duration="8162000" />
+      <workItem from="1681999131307" duration="7160000" />
+      <workItem from="1682011627764" duration="4778000" />
+      <workItem from="1682017941299" duration="3472000" />
+      <workItem from="1682021544398" duration="11076000" />
+      <workItem from="1682087527703" duration="675000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
